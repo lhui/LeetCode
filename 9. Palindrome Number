@@ -1,0 +1,16 @@
+class Solution {
+    public boolean isPalindrome(int x) {
+        int temp = x;
+        if(x < 0){
+            return false;
+            }
+        
+        // 反转数据 这种思想比较和转换数组不一样, 确实有另一种思想
+        int revnum = 0;
+        while(temp != 0) {
+            revnum = revnum * 10 + temp % 10;
+            temp = temp/10;
+        }
+        return revnum == x;
+    }
+}
